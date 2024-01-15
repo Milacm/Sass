@@ -1,0 +1,104 @@
+@import './mixins.sass'
+@import './variables.sass'
+body
+  background-color: #d8d8d8
+nav
+  @include flex(row, space-between, center)
+  padding: 25px 25px
+  background-color: $main-color
+  @include letras(20px, 600, #ffff)
+  cursor: pointer
+  .logo
+    @include letras(30px, 500)
+    padding: 0 0 0 50px
+    transition: 0.3s ease
+  .logo:hover
+    transform: scale(1.2)
+    color: black
+  .navegacion2
+    @include flex(row, center, center)
+  .navegacion
+    display: none
+  .navegacion p:hover
+    color: black
+
+@media only screen and (min-width: 600px)
+  
+
+@media only screen and (min-width: 768px)
+  nav
+    .navegacion2
+      display: none
+    .navegacion
+      @include flex(row, 20px)
+
+img
+  width: 99vw
+  height: 500px
+  justify-items: center
+  
+@media only screen and (min-width: 768px)
+  img
+    .banner
+      width: 27vw
+      height: 130px
+      justify-items: center
+
+
+main
+  @include flex(row, center, center)
+  flex-wrap: wrap
+  padding-left: 60px
+  margin-top: 20px 
+  div
+    width: 350px
+    height: 450px
+    background-color: #dce5dc
+    border-radius: 8px
+    overflow: hidden
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.2)
+    margin: 20px
+    transition: 0.5s ease
+    padding: 15px
+    margin-top: 30px
+  div:hover
+    transform: scale(1.09)
+  img
+    width: 100%
+    height: auto
+  .titulo
+    @include letras($tamano-letra-titulos, 450, $text-color-uno, center)
+    display: flex
+    text-decoration: none
+    margin-top: 15px 
+  p
+    @include letras($tamano-letra-contenido, $text-color-dos, $nombre-de-fuente, justify)
+    display: flex
+    margin: 10px 10px
+
+footer
+  padding: 15px
+  margin-top: 30px
+  background-color: #252525
+  .footer-contenedor
+    @include flex(row, space-evenly, center, 8px)
+    width: 95%
+    height: 30%
+    margin: 0px
+    @include letras($tamano-letra-contenido, 500, #ffffff, $nombre-de-fuente, left)
+    cursor: pointer
+    .logo
+      display: none
+  h3
+    padding-bottom: 5px
+    justify-content: baseline
+  p
+    padding-bottom: 8px
+
+@media only screen and (min-width: 768px)
+  footer
+    .footer-contenedor
+      .logo
+        display: flex
+        font-size: 30px
+        font-weight: 500

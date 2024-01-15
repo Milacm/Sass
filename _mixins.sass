@@ -1,0 +1,13 @@
+@mixin flex($orientacion: row, $primary-axis:auto, $secondary-axis:auto, $gap:20px)
+    display: flex
+    flex-direction: $orientacion
+    justify-content: $primary-axis
+    align-items: $secondary-axis
+    gap: $gap
+
+@mixin letras($size:12px, $weight:500, $color:auto, $fuente: auto, $alineacion:center)
+    font-size: $size
+    font-weight: $weight
+    color: $color
+    font-family: $fuente
+    text-align: $alineacion
